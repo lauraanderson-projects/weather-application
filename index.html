@@ -3,11 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="scr/index.css" />
-    <title>Document</title>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Temperature App</title>
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <script src="scr/javascript.js"></script>
+    <div class="weather-main">
+      <header>
+        <form id="citySearch">
+          <div class="form-group">
+            <input
+              type="search"
+              placeholder="Enter a city.."
+              id="cityName"
+              required
+              class="city-search-entry"
+            />
+            <input type="submit" value="Search" class="city-search-submit" />
+          </div>
+        </form>
+      </header>
+      <main>
+        <div class="current-city-temperature">
+          <div>
+            <h1 id="city-name-heading"></h1>
+            <p class="current-details">
+              <span id="current-time"></span>
+              <span id="weather-description"></span><br />
+              <span id="weather-condition"></span>
+            </p>
+          </div>
+          <div>
+            <p>
+              <span class="current-weather-icon"> </span>
+              <span class="current-weather-temp" id="current-weather-temp">
+              </span>
+              <span class="current-weather-degree"></span>
+            </p>
+          </div>
+        </div>
+        <div class="weeklyTemp">
+          <ul>
+            <li>
+              <div class="weeklyTemp-weekday">Sun</div>
+              <div class="weeklyTemp-icon">⛅️</div>
+              <div class="weeklyTemp-degree">
+                <strong>14&deg;C</strong> - 18&deg;C
+              </div>
+            </li>
+            <li>
+              <div class="weeklyTemp-weekday">Mon</div>
+              <div class="weeklyTemp-icon">⛅️</div>
+              <div class="weeklyTemp-degree">
+                <strong>14&deg;C</strong> - 18&deg;C
+              </div>
+            </li>
+            <li>
+              <div class="weeklyTemp-weekday">Tue</div>
+              <div class="weeklyTemp-icon">⛅️</div>
+              <div class="weeklyTemp-degree">
+                <strong>14&deg;C</strong> - 18&deg;C
+              </div>
+            </li>
+            <li>
+              <div class="weeklyTemp-weekday">Wed</div>
+              <div class="weeklyTemp-icon">⛅️</div>
+              <div class="weeklyTemp-degree">
+                <strong>14&deg;C</strong> - 18&deg;C
+              </div>
+            </li>
+            <li>
+              <div class="weeklyTemp-weekday">Thu</div>
+              <div class="weeklyTemp-icon">⛅️</div>
+              <div class="weeklyTemp-degree">
+                <strong>14&deg;C</strong> - 18&deg;C
+              </div>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <footer>
+        This project was coded by
+        <a href="#" target="_blank">Laura Anderson</a> and is on
+        <a href="#" target="_blank">GitHub</a> and hosted on
+        <a href="#" target="_blank">Netlify</a>.
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
