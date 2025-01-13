@@ -44,9 +44,9 @@ function displayTempertureEvent(response) {
     "#weather-description"
   );
   let weatherConditionElement = document.querySelector("#weather-condition");
-  let currentTempElement = document.querySelector(".current-weather-temp");
-  let iconElement = document.querySelector(".current-weather-icon");
-  let currentWeatherDegree = document.querySelector(".current-weather-degree");
+  let currentTempElement = document.querySelector("#current-weather-temp");
+  let iconElement = document.querySelector("#current-weather-icon");
+  let currentWeatherDegree = document.querySelector("#current-weather-degree");
   //set elements
   temperatureElement.innerHTML = city;
   currentTimeElement.innerHTML = day;
