@@ -79,7 +79,7 @@ function getCitySearch(event) {
 }
 
 function setInitialCity() {
-  let city = "Snohomish";
+  let city = "Seattle";
   //api information for temp search
   //let apiKey = "bd809658a5b50o74b7f3fe9fa5dft8a8";
   //let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
