@@ -1,7 +1,7 @@
 function apiKeyURL(cityname) {
-  let city = cityname;
+  //let city = cityname;
   let apiKey = "bd809658a5b50o74b7f3fe9fa5dft8a8";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityname}&key=${apiKey}&units=imperial`;
   return apiUrl;
 }
 
