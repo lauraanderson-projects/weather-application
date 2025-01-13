@@ -28,9 +28,9 @@ function formatDate(currentDate) {
 }
 
 function displayTempertureEvent(response) {
-  let day = formatDate(new Date());
   //get responses
   let city = response.data.city;
+  let date = new Date(response.data.time * 1000);
   let condition = response.data.condition.description;
   let temperature = Math.round(response.data.temperature.current);
   let humidity = response.data.temperature.humidity;
@@ -49,7 +49,7 @@ function displayTempertureEvent(response) {
   let currentWeatherDegree = document.querySelector("#current-weather-degree");
   //set elements
   temperatureElement.innerHTML = city;
-  currentTimeElement.innerHTML = day;
+  currentTimeElement.innerHTML = formatDate(date);
   weatherDescriptionElement.innerHTML = `, ${condition}`;
   weatherConditionElement.innerHTML = `Humidity: <strong>${humidity}%</strong>, Wind:
                 <strong>${wind}km/h</strong>`;
@@ -64,8 +64,6 @@ function getCitySearch(event) {
   let city = document.querySelector("#cityName");
   city = city.value.trim();
   //api information for temp search
-  //let apiKey = "bd809658a5b50o74b7f3fe9fa5dft8a8";
-  //let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   let apiUrl = apiKeyURL(city);
   axios.get(apiUrl).then(displayTempertureEvent);
 
@@ -81,8 +79,6 @@ function getCitySearch(event) {
 function setInitialCity() {
   let city = "Seattle";
   //api information for temp search
-  //let apiKey = "bd809658a5b50o74b7f3fe9fa5dft8a8";
-  //let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   let apiUrl = apiKeyURL(city);
   axios.get(apiUrl).then(displayTempertureEvent);
 }
