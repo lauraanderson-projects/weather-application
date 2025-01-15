@@ -83,7 +83,30 @@ function setInitialCity() {
   axios.get(apiUrl).then(displayTempertureEvent);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Wed", "Thur", "Fri", "Sat", "Sun"];
+  let forecastHTML = "";
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="weather-forecast-day">
+            <div class="weather-forecast-date">${day}</div>
+            <div class="weather-forecast-icon">⛅️</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperature">
+                <strong>14&deg;C</strong>
+              </div>
+              <div class="weather-forecast-temperature">18&deg;C</div>
+            </div>
+          </div>`;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+
 setInitialCity();
 
 let citySearch = document.querySelector("#citySearch");
 citySearch.addEventListener("submit", getCitySearch);
+
+displayForecast();
