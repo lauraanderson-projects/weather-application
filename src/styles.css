@@ -100,13 +100,31 @@ footer a:hover {
 .weeklyTemp {
   padding: 0px 0px;
 }
-.weeklyTemp-weekday {
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+  margin-top: 20px;
+}
+.weather-forecast-date {
   font-size: 28px;
   font-weight: 900;
+  text-align: center;
+  color: #537895;
 }
-.weeklyTemp-icon {
+.weather-forecast-icon {
+  text-align: center;
   font-size: 28px;
 }
-.weeklyTemp-degree {
+
+.weather-forecast-temperatures {
+  display: flex;
+  justify-content: center;
+}
+.weather-forecast-temperature {
   font-size: 16px;
+  text-align: center;
+  color: #537895;
+  padding: 0 10px;
 }
