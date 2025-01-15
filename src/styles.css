@@ -11,24 +11,7 @@ h1 {
 header {
   padding-bottom: 25px;
 }
-ul {
-  display: flex;
-  justify-content: space-between;
-  padding: 0px;
-}
-li {
-  list-style-type: none;
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #537895;
-  padding: 10px;
-}
-li:hover {
-  background-color: rgb(146, 146, 146, 0.08);
-  color: #09203f;
-  cursor: pointer;
-}
+
 footer {
   color: rgb(146, 146, 146);
   padding: 30px 0px 0px 0px;
