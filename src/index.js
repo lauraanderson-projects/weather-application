@@ -56,6 +56,8 @@ function displayTempertureEvent(response) {
   currentTempElement.innerHTML = temperature;
   currentWeatherDegree.innerHTML = degree;
   iconElement.innerHTML = `<img src="${icon}" class="current-weather-icon" />`;
+
+  getForecast(response.data.city);
 }
 
 function getCitySearch(event) {
@@ -83,7 +85,14 @@ function setInitialCity() {
   axios.get(apiUrl).then(displayTempertureEvent);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "bd809658a5b50o74b7f3fe9fa5dft8a8";
+  let apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios.get(apiURL).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let days = ["Wed", "Thur", "Fri", "Sat", "Sun"];
   let forecastHTML = "";
   days.forEach(function (day) {
@@ -108,5 +117,3 @@ setInitialCity();
 
 let citySearch = document.querySelector("#citySearch");
 citySearch.addEventListener("submit", getCitySearch);
-
-displayForecast();
