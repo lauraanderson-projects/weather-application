@@ -84,7 +84,6 @@ function setInitialCity() {
 }
 
 function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
   let days = ["Wed", "Thur", "Fri", "Sat", "Sun"];
   let forecastHTML = "";
   days.forEach(function (day) {
@@ -101,6 +100,7 @@ function displayForecast() {
             </div>
           </div>`;
   });
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHTML;
 }
 
