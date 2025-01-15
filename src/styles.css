@@ -31,7 +31,7 @@ li:hover {
 }
 footer {
   color: rgb(146, 146, 146);
-  padding: 30px 0px 10px 0px;
+  padding: 30px 0px 0px 0px;
   font-size: 15px;
 }
 
@@ -86,6 +86,7 @@ footer a:hover {
   top: 10px;
   width: 100px;
 }
+
 .current-weather-temp {
   font-size: 80px;
   color: black;
@@ -108,14 +109,18 @@ footer a:hover {
   margin-top: 20px;
 }
 .weather-forecast-date {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 900;
   text-align: center;
   color: #537895;
 }
+
 .weather-forecast-icon {
   text-align: center;
-  font-size: 28px;
+  font-size: 40px;
+  display: block;
+  margin: 0 auto;
+  width: 80px;
 }
 
 .weather-forecast-temperatures {
@@ -123,7 +128,7 @@ footer a:hover {
   justify-content: center;
 }
 .weather-forecast-temperature {
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   color: #537895;
   padding: 0 10px;
